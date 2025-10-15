@@ -20,12 +20,14 @@ List, Nested List, and Mixed Lists.-->
         padding:20px;
         margin:0;
     }
+    
     .ABES{
         color:#ffffff;
         text-decoration:underline;
         font-size:30px;
         font-family: 'Courier New', Courier, monospace;
     }
+
     .syllabus{
         background-color:#322a21;
         border:2px solid black;
@@ -33,12 +35,14 @@ List, Nested List, and Mixed Lists.-->
         padding:10px;
         margin:0;
     }
+
     .Syllabus-123{
         color:#F02F34;
         text-decoration:underline;
         font-size:30px;
         font-family: 'Courier New', Courier, monospace;
     }
+
     .Unit-1{
         background-color:#6d1515;
         -webkit-text-fill-color: #ffffff;
@@ -47,6 +51,7 @@ List, Nested List, and Mixed Lists.-->
         padding:10px;
         margin:0;
     }
+
     .Div-1{
         background-color:#6d1515;
         -webkit-text-fill-color: #ffffff;
@@ -55,6 +60,7 @@ List, Nested List, and Mixed Lists.-->
         padding:10px;
         margin:0;
     }
+
     .expand-btn {
   width: 100px;
   transition: width 0.3s ease;
@@ -68,6 +74,7 @@ List, Nested List, and Mixed Lists.-->
 .expand-btn:active {
   width: 200px;
 }
+
 .Hidden-text {
   display: none;
   margin-top: 10px;
@@ -75,6 +82,30 @@ List, Nested List, and Mixed Lists.-->
   background-color: #f9f9f9;
   border: 1px solid #ccc;
 }
+.Hidden-text-1 {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.Hidden-text-2 {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+.Hidden-text-3 {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
 .expand-btn:active + .Hidden-text {
   display: block;
 }
@@ -93,6 +124,7 @@ List, Nested List, and Mixed Lists.-->
 
     <div class="syllabus">
         <button class="expand-btn" onclick="showSyllabus()">Syllabus</button>
+        
         <div class="Hidden-text" id="syllabus-content">
             <div class="Unit-1" >
                 <h1><u><i><b>Unit 1:  Introduction to Web Technology</b></i></u></h1>
@@ -104,10 +136,44 @@ List, Nested List, and Mixed Lists.-->
         Using Multimedia (Image/Video/Audio/YouTube) in HTML, Creating & Using Hyperlinks, Accessibility and Semantic Considerations, Practical</p>
             </div>
         </div>
+        
+        <div class="Hidden-text-1" id="syllabus-content-2">
+            <div class="Unit-1" >
+                <h1><u><i><b>Unit 2:   Web Page Development using HTML</b></i></u></h1>
+                <p>  HTML Table: Creating and using Tables, Basic Table Structure, Table Headers and Captions, HTML Table: Rowspan and Colspan, Table Attributes, 
+        Responsive Tables, HTML Table: Nested Tables, Accessibility in Tables, Practical, HTML Form: The <form> Element, Input Elements, Label and 
+        Fieldset, HTML Form: Select and Option Tags, TextArea, Button Element, HTML Form: Form Attributes, Input Validation, Accessibility and Usability, 
+        What is Git and why use it?, Git setup and config (git config), Creating a local repository: git init, Tracking changes: add, commit, status, log, .gitignore 
+        basics, Practical
+            </div>
+        </div>
+           
+        <div class="Hidden-text-2" id="syllabus-content-3">
+            <div class="Unit-1" >
+                <h1><u><i><b>Unit 3:   Version Control with Git & GitHub and CSS Fundamentals</b></i></u></h1>
+                <p>   Creating a GitHub account, Connecting local repos to GitHub: remote add, push, Cloning and pulling repositories, GitHub repository structure and 
+        README.md, Basic collaboration terms: fork, pull request, branch (intro), Branching: git branch, git checkout, git switch, Merging branches, handling 
+        merge conflicts, GitHub collaboration workflow, Best practices for commits, branches, and messages, Practical with all steps of git, CSS selectors: 
+        element, class, ID, Color, fonts, text alignment, font size, Box model: padding, margin, border, Box model: padding, margin, border, Applying styles: 
+        inline, internal, external
+            </div>
+        </div>
+
+        <div class="Hidden-text-3" id="syllabus-content-4">
+            <div class="Unit-1" >
+                <h1><u><i><b>Unit 4:   VCSS for Advanced Styling and Responsive Layout</b></i></u></h1>
+                <p>    display: block, inline, inline-block, float and clear, Introduction to Flexbox: justify-content, align-items, flex-direction, Practical in CSS, Units: px, %, em, 
+        rem, vh, vw, Media queries and breakpoints, Media queries and breakpoints, Mobile-first design, Responsive navigation concepts, Practicals, Project 
+        planning and design, Version control in large projects, Deploy using GitHub Pages, Final portfolio polishing, Project using HTML & CSS
+            </div>
+        </div>
     </div>
     <script>
     function showSyllabus() {
         document.getElementById('syllabus-content').style.display = 'block';
+        document.getElementById('syllabus-content-2').style.display = 'block';
+        document.getElementById('syllabus-content-3').style.display = 'block';
+        document.getElementById('syllabus-content-4').style.display = 'block';
     }
     </script>
 </body>
