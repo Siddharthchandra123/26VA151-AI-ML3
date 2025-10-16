@@ -61,19 +61,18 @@ List, Nested List, and Mixed Lists.-->
         margin:0;
     }
 
-    .expand-btn {
-  width: 100px;
-  transition: width 0.3s ease;
-  padding: 10px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.expand-btn:active {
-  width: 200px;
-}
+        .expand-btn {
+                width: 100px;
+                transition: width 0.3s ease;
+                padding: 10px;
+                background-color: #3498db;
+                color: white;
+                border: none;
+                cursor: pointer;
+        }
+        .expand-btn.expanded {
+                width: 200px;
+        }
 
 .Hidden-text {
   display: none;
@@ -123,7 +122,7 @@ List, Nested List, and Mixed Lists.-->
     </div>
 
     <div class="syllabus">
-        <button class="expand-btn" onclick="showSyllabus()">Syllabus</button>
+        <button class="expand-btn" id="syllabus-btn" onclick="showSyllabus()">Syllabus</button>
         
         <div class="Hidden-text" id="syllabus-content">
             <div class="Unit-1" >
@@ -169,11 +168,27 @@ List, Nested List, and Mixed Lists.-->
         </div>
     </div>
     <script>
+    const ids = [
+        'syllabus-content',
+        'syllabus-content-2',
+        'syllabus-content-3',
+        'syllabus-content-4'
+    ];
     function showSyllabus() {
-        document.getElementById('syllabus-content').style.display = 'block';
-        document.getElementById('syllabus-content-2').style.display = 'block';
-        document.getElementById('syllabus-content-3').style.display = 'block';
-        document.getElementById('syllabus-content-4').style.display = 'block';
+        ids.forEach(id => {
+            document.getElementById(id).style.display = 'block';
+        });
+        const btn = document.getElementById('syllabus-btn');
+        btn.classList.add('expanded');
+        btn.onclick = hideSyllabus;
+    }
+    function hideSyllabus() {
+        ids.forEach(id => {
+            document.getElementById(id).style.display = 'none';
+        });
+        const btn = document.getElementById('syllabus-btn');
+        btn.classList.remove('expanded');
+        btn.onclick = showSyllabus;
     }
     </script>
 </body>
